@@ -3,7 +3,7 @@ const Goal = require("./goal");
 module.exports = (sequelize, DataTypes) => {
   const Saving = sequelize.define("Saving", {
     amount: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.FLOAT(10, 2),
       allowNull: false
     },
     id_goal: {

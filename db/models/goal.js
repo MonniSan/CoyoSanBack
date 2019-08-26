@@ -14,11 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     amountToBe: {
-      type: DataTypes.REAL(10, 2),
+      type: DataTypes.FLOAT(10, 2),
       allowNull: false
     },
     amountAccumReal: {
-      type: DataTypes.REAL(10, 2),
+      type: DataTypes.FLOAT(10, 2),
       allowNull: false,
       defaultValue: 0
     },
