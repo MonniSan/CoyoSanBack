@@ -1,8 +1,8 @@
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const db = require("./db/models");
-// db.sequelize.sync({ force: true });
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const SenseiTypesRouter = require("./routes/sensei_types");
@@ -14,6 +14,7 @@ app.set("port", process.env.PORT || 3000);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 app.use("/sensei-types", SenseiTypesRouter);
 app.use("/user", UserRouter);
 app.use("/goal", GoalRouter);
