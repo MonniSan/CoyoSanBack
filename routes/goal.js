@@ -67,7 +67,7 @@ Router.get("/update", async function(request, response) {
     const decoded = jwt.verify(token, privateKey);
 
     const fristSaving = await db.Saving.findOne({
-      where: { id_goal: decoded.id },
+      where: { id_goal: decoded.id_goal },
       order: [["createdAt", "ASC"]]
     });
     //controller
